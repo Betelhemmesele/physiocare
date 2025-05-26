@@ -56,9 +56,7 @@ const Home = () => {
       <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl">
         Expert Physical Therapy and Chiropractic Care in Baldwin, NY
       </h2>
-      <p className="text-base sm:text-lg md:text-xl lg:text-2xl">
-        At <strong>PhysioDev NY</strong>, we help individuals of all ages recover from <strong>injuries</strong>, relieve <strong>chronic pain</strong>, and improve mobility through personalized <strong>physical therapy</strong> and <strong>chiropractic treatments</strong>. Your health and wellness are our priority.
-      </p>
+     
       {/* Subheading */}
       <ul className="text-base sm:text-lg md:text-xl lg:text-2xl list-disc pl-5">
         <li>Personalized, evidence-based care</li>
@@ -68,12 +66,12 @@ const Home = () => {
           {/* Buttons */}
           <div className="md:mt-4 flex flex-col sm:flex-row sm:justify-start">
   <Link to="/contact-us">
-    <button className="w-48 bg-blue-600 text-white py-3 px-4 md:px-10 rounded-3xl hover:bg-blue-500 transition duration-200 focus:outline-none focus:ring-2 focus:ring-orange-600 focus:ring-opacity-50">
+    <button className="w-48 bg-blue-600 text-white py-3 px-4 md:px-10 rounded-3xl hover:bg-blue-500 transition duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-600 focus-visible:ring-opacity-70">
     Contact Us
     </button>
   </Link>
   <Link to="/request-trip">
-    <button className="mt-4 sm:mt-0 sm:ml-2 w-48 bg-blue-600 text-white py-3 px-4 md:px-10 rounded-3xl hover:bg-blue-500 transition duration-200 focus:outline-none focus:ring-2 focus:ring-orange-600 focus:ring-opacity-50">
+    <button className="mt-4 sm:mt-0 sm:ml-2 w-48 bg-blue-600 text-white py-3 px-4 md:px-10 rounded-3xl hover:bg-blue-500 transition duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-600 focus-visible:ring-opacity-70">
        Book Your Trip
     </button>
   </Link>
@@ -82,7 +80,7 @@ const Home = () => {
   target="_blank"
   rel="noreferrer"
 >
-  <button className="mt-4 sm:mt-0 sm:ml-2 w-48 bg-blue-600 text-white py-3 px-4 md:px-10 rounded-3xl hover:bg-blue-500 transition duration-200 focus:outline-none focus:ring-2 focus:ring-orange-600 focus:ring-opacity-50 flex items-center justify-center gap-2">
+  <button className="mt-4 sm:mt-0 sm:ml-2 w-48 bg-blue-600 text-white py-3 px-4 md:px-10 rounded-3xl hover:bg-blue-500 transition duration-200  flex items-center justify-center focus-visible:ring-2 focus-visible:ring-orange-600 focus-visible:ring-opacity-70 gap-2">
     <span>Zoho Mail</span>
     <FaEnvelope className="text-white text-lg sm:text-xl md:text-2xl lg:text-2xl" />
   </button>
@@ -108,7 +106,7 @@ const Home = () => {
     <div className="w-full md:w-1/2 mb-8 md:mb-0">
       <img
         src={oldppl}//oldppl
-        alt="Royal Care Transportation"
+        alt="Physical Therapy and Chiropractic Care"
         className="w-full h-auto rounded-full md:rounded-lg shadow-md"
       />
     </div>
@@ -117,15 +115,15 @@ const Home = () => {
     <div className="w-full md:w-1/2 flex flex-col justify-center space-y-4 px-4 md:px-8">
       <h2 className="text-3xl md:text-4xl font-bold text-gray-900">About Physical Therapy and Chiropractic Care</h2>
       
-      {/* Shorter text to show initially */}
       <p className="text-lg text-gray-700">
-        At Royal Care Transportation, we are dedicated to providing safe, reliable, and compassionate non-emergency transportation services for seniors and individuals with special needs.
-      </p>
+  At PhysioDev NY, we help individuals of all ages recover from injuries, manage chronic pain, and improve mobility through personalized physical therapy and chiropractic care. Your health and wellness are our top priority.
+</p>
 
+     
       {/* Button that navigates to the 'About Us' page */}
       <a 
         href="/about-us" 
-        className="bg-orange-900 text-white py-2 px-6 rounded-lg hover:bg-orange-800 transition duration-200"
+        className="bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-500 transition duration-200"
       >
         Learn about Our Company
       </a>
@@ -137,50 +135,55 @@ const Home = () => {
 
 <section className="bg-gray-100 section opacity-0 transform translate-y-10 transition-all duration-700 ease-in-out py-20" aria-labelledby="services-header">
   <div className="container mx-auto max-w-6xl px-4 md:px-2">
-    <h2 id="services-header" className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-10">Our Services</h2>
+    <h2 id="services-header" className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-4">Our Services</h2>
+   
+
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
-      {/* Service Cards */}
+      {/* Worker’s Compensation Rehab */}
       <article className="service-card">
         <ServiceCard 
           image={helpingcar}
-          title="Senior Living Transportation"
-          description="Providing safe and reliable transportation for seniors to and from their senior living facilities."
+          title="Worker’s Compensation Rehab"
+          description="Personalized therapy programs to help injured workers recover safely, return to work confidently, and navigate the workers’ comp process."
           link="/services"
-          alt="Transportation for seniors to living facilities"
+          alt="Rehabilitation for workplace injuries"
         />
       </article>
 
+      {/* Motor Vehicle Accident Recovery */}
       <article className="service-card">
         <ServiceCard 
-          image={driver}//driver.webp
-          title="Doctor Appointments"
-          description="Ensure timely arrival to your medical appointments with our reliable transportation service."
+          image={driver}
+          title="Motor Vehicle Accident Recovery"
+          description="Targeted treatments for whiplash, back pain, and joint trauma from car accidents. We assist with insurance documentation and care continuity."
           link="/services"
-          alt="Transportation for doctor appointments"
+          alt="Recovery services after car accidents"
         />
       </article>
 
+      {/* Pain Management */}
       <article className="service-card">
         <ServiceCard 
-          image={carnold}//driverold
-          title="Non-Emergency Transportation"
-          description="Specialized services for wheelchair and stretcher transportation, ensuring comfort and safety."
+          image={carnold}
+          title="Pain Management"
+          description="Non-invasive therapies to manage chronic pain from arthritis, sciatica, migraines, and more — focusing on function and reducing medication use."
           link="/services"
-          alt="Non-emergency transportation for seniors"
+          alt="Chronic pain management"
         />
       </article>
 
+      {/* Physical Therapy */}
       <article className="service-card">
         <ServiceCard 
-          image={vaccine}//vaccine
-          title="COVID-19 Vaccine Transportation"
-          description="Providing safe and reliable transportation for individuals receiving their COVID-19 vaccines."
+          image={vaccine}
+          title="Physical Therapy"
+          description="Evidence-based rehab for orthopedic, neurological, and post-surgical conditions, restoring strength, balance, and flexibility."
           link="/services"
-          alt="Transportation for COVID-19 vaccinations"
+          alt="Physical therapy services"
         />
       </article>
-      
+
     </div>
   </div>
 </section>
@@ -262,7 +265,7 @@ const Home = () => {
         
         <a 
           href="/testimonials" // Link to the testimonial page
-          className="bg-orange-900 text-white py-3 px-6 rounded-lg mt-10 hover:bg-orange-800 transition duration-200"
+          className="bg-blue-700 text-white py-3 px-6 rounded-lg mt-10 hover:bg-blue-600 transition duration-200"
         >
           See Reviews
         </a>

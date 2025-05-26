@@ -2,15 +2,15 @@
 import React from 'react';
 import './ContactCard.css'
 const CardSection = ({
-  backgroundImage,
+  // backgroundImage,
   overlayColor = "bg-gray-900",
   overlayOpacity = "opacity-50",
   heading,
   content,
   buttonText,
   buttonLink,
-  buttonColor = "bg-orange-950",
-  buttonHoverColor = "hover:bg-orange-900",
+  buttonColor = "bg-blue-900",
+  buttonHoverColor = "hover:bg-blue-700",
 }) => {
   return (
     <section className="section transition-all duration-700 ease-in-out py-10"> {/* Removed opacity-0 and translate-y-10 */}
@@ -19,7 +19,7 @@ const CardSection = ({
           {/* Background image */}
           <div 
   className="background-image absolute inset-0 rounded-lg" 
-  style={{ '--background-image-url': `url(${backgroundImage})` }}
+  style={{ '--background-image-url': `url('https://www.pixelstalk.net/wp-content/uploads/images8/Blue-Background-HD-Free-download.jpg')` }}
 ></div>
 
           {/* Overlay for better text visibility */}

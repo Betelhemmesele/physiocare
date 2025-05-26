@@ -1,5 +1,5 @@
 .hero-section {
-    background-image: url('../assets/phsiohomes.webp');
+    background-image: url('../assets/phsiohome.jpg');
     background-size: cover; /* Ensures the image covers the container */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
@@ -21,7 +21,7 @@
   }
   
   .background-image-section {
-    background-image: url('../assets/frontpic.webp');
+    background-image: url('https://www.photonengine.com/v2/img/home/intro-bg/t4.jpg');
     background-size: cover;
     background-position: center;
   }

@@ -23,7 +23,10 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="bg-orange-900 text-white py-12">
+    <footer
+  className="text-white py-12 bg-cover bg-center"
+  style={{ backgroundImage: "url('https://www.sunline.org/sites/default/files/sunride-bluebg.jpg')" }}
+>
       <div className="container mx-auto max-w-9xl px-4 md:px-1">
         <div className="flex flex-col md:flex-row justify-between md:space-x-2 lg:space-x-12">
           {/* Brand Description */}

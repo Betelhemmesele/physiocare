@@ -14,7 +14,7 @@ const ServiceCard = ({ image, title, description, link }) => {
         <p className="text-gray-700 mb-4">{description}</p>
         <a 
           href={link} 
-          className="bg-blue-900 text-white py-2 px-4 rounded-lg hover:bg-blue-800 transition duration-200 mt-auto"
+          className="bg-blue-700 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-200 mt-auto"
         >
           Explore Our Services
         </a>
