@@ -35,12 +35,10 @@ const Header = () => {
       >
         Services
       </Link>
-      <Link
-        to="/request-trip"
-        className="text-gray-700 hover:bg-blue-500 hover:text-white px-4 py-2 md:px-2 lg:px-4 rounded-sm transition duration-300"
+      <Link to="/patient-info" className="text-gray-700 hover:bg-blue-500 hover:text-white px-4 py-2 md:px-2 lg:px-4 rounded-sm transition duration-300"
       >
-        Request a Trip
-      </Link>
+  Patient Info
+</Link>
       <Link
         to="/contact-us"
         className="text-gray-700 hover:bg-blue-500 hover:text-white px-4 py-2 md:px-2 lg:px-4 rounded-sm transition duration-300"
@@ -58,12 +56,6 @@ const Header = () => {
         className="text-gray-700 hover:bg-blue-500 hover:text-white px-4 py-2 md:px-2 lg:px-4 rounded-sm transition duration-300"
       >
         Testimonials
-      </Link>
-      <Link
-        to="/compliance"
-        className="text-gray-700 hover:bg-blue-500 hover:text-white px-4 py-2 md:px-2 lg:px-4 rounded-sm transition duration-300"
-      >
-        Compliance
       </Link>
       <Link
         to="/faqs"
@@ -123,7 +115,7 @@ const Header = () => {
           </div>
 
           {/* Call Icon (right side) */}
-          <a href="tel:+1214302-3232" className="text-orange-900 hover:text-orange-700 transition duration-300" aria-label="Follow us on Twitter">
+          <a href="tel:+1214302-3232" className="text-blue-700 hover:text-orange-700 transition duration-300" aria-label="Follow us on Twitter">
             <FaPhoneAlt className="w-6 h-6" />
           </a>
         </div>
@@ -140,7 +132,7 @@ const Header = () => {
             <div className="flex flex-col items-start space-y-2 py-4 px-4">
               {/* Menu Items */}
               <button
-                className="text-gray-700 hover:text-red-600 focus:outline-none mb-4"
+                className="text-gray-700 hover:text-blue-600 focus:outline-none mb-4"
                 onClick={toggleMenu}
               >
                 {/* X icon inside menu */}
@@ -174,13 +166,10 @@ const Header = () => {
               >
                 Services
               </Link>
-              <Link
-                to="/request-trip"
-                className="block text-gray-700 hover:bg-blue-500 hover:text-white px-4 py-2 rounded-sm transition duration-300 w-full"
-                onClick={toggleMenu}
-              >
-                Request a Trip
-              </Link>
+              <Link to="/patient-info" className="block text-gray-700 hover:bg-blue-500 hover:text-white px-4 py-2 rounded-sm transition duration-300 w-full"
+                onClick={toggleMenu} >
+  Patient Info
+</Link>
               <Link
                 to="/contact-us"
                 className="block text-gray-700 hover:bg-blue-500 hover:text-white px-4 py-2 rounded-sm transition duration-300 w-full"
@@ -202,13 +191,7 @@ const Header = () => {
               >
                 Testimonials
               </Link>
-              <Link
-                to="/compliance"
-                className="block text-gray-700 hover:bg-blue-500 hover:text-white px-4 py-2 rounded-sm transition duration-300 w-full"
-                onClick={toggleMenu}
-              >
-                Compliance
-              </Link>
+              
               <Link
                 to="/faqs"
                 className="block text-gray-700 hover:bg-blue-500 hover:text-white px-4 py-2 rounded-sm transition duration-300 w-full"

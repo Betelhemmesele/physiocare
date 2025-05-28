@@ -1,101 +1,102 @@
 import React from 'react';
 import CardSection from '../components/Contactcard';
 import abstract from '../assets/abstract.webp';
-import seniorlivingsection from '../assets/serviceSection/seniorlivingsection.webp';
-import covid from '../assets/serviceSection/covid.webp';
-import doctorapp from '../assets/serviceSection/doctorapp.webp';
-import plane from '../assets/serviceSection/plane.webp';
-import wheeltransport from '../assets/serviceSection/wheeltransport.webp';
+
 const servicesData = [
   {
-    title: "Senior Living Transportation",
-    description: "Reliable transportation for seniors to help them get to their destinations with ease and comfort.",
-    imageUrl: seniorlivingsection, // Local image
+    title: "Worker's Compensation Rehab",
+    description: "Personalized therapy programs to help injured workers recover safely, return to work confidently, and navigate the workers' comp process. We work closely with case managers, employers, and physicians.",
+    imageUrl: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    color: "bg-blue-100",
+    rotate: "-rotate-1"
   },
   {
-    title: "Doctor Appointments",
-    description: "On-time transportation for scheduled medical appointments.",
-    imageUrl: doctorapp, // Local image
+    title: "Motor Vehicle Accident Recovery",
+    description: "Targeted treatments for injuries like whiplash, back pain, neck strain, and joint trauma resulting from car accidents. We assist with insurance documentation and care continuity.",
+    imageUrl: "https://images.unsplash.com/photo-1553413077-190dd305871c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    color: "bg-blue-100",
+    rotate: "rotate-1"
   },
   {
-    title: "Non-Emergency Transportation",
-    description: "Safe and secure transportation for non-emergency medical needs, including wheelchair and stretcher services.",
-    imageUrl: wheeltransport, // Local image
-    subServices: [
-      "Wheelchair Transportation",
-      "Stretcher Services",
-    ],
+    title: "Pain Management",
+    description: "Non-invasive therapies to reduce chronic pain symptoms caused by arthritis, disc issues, sciatica, migraines, or fibromyalgia — focusing on functional improvements and reduced reliance on medications.",
+    imageUrl: "https://images.unsplash.com/photo-1579684453423-f84349ef60b0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    color: "bg-blue-100",
+    rotate: "-rotate-2"
   },
   {
-    title: "Airport Transportation",
-    description: "Convenient and timely airport transfers for all passengers.",
-    imageUrl: plane, // Local image
+    title: "Physical Therapy",
+    description: "Evidence-based rehabilitation for orthopedic, neurological, and post-surgical conditions. We emphasize restoring strength, balance, and flexibility through guided movement and exercises.",
+    imageUrl: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    color: "bg-blue-100",
+    rotate: "rotate-2"
   },
   {
-    title: "COVID-19 Vaccine Transportation",
-    description: "Transportation to and from COVID-19 vaccination sites.",
-    imageUrl: covid, // Local image
+    title: "Chiropractic Care",
+    description: "Chiropractic adjustments, spinal manipulation, and soft tissue work to relieve pain, correct alignment, and support your nervous system. This complements physical therapy and promotes whole-body healing.",
+    imageUrl: "https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    color: "bg-blue-100",
+    rotate: "-rotate-1"
   },
 ];
 
 const ServicesPage = () => {
   return (
-    <section className="bg-gray-100 pb-3 pt-36" aria-labelledby="services-header">
+    <section className="bg-gradient-to-b from-blue-50 to-white pb-16 pt-28" aria-labelledby="services-header">
       <div className="container mx-auto max-w-6xl px-4">
         
         {/* Page Header */}
-        <header className="text-center mb-12">
-          <h1 id="services-header" className="text-4xl font-bold text-gray-900">Our Services</h1>
-          <p className="text-lg text-gray-700 mt-4">
-            We offer a wide range of non-emergency transportation services, ensuring our clients reach their destinations safely and comfortably.
+        <header className="text-center mb-16">
+          <h1 id="services-header" className="text-5xl font-bold text-gray-900 font-serif mb-4 mt-3">Our Service Areas</h1>
+          <div className="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+            Comprehensive care solutions tailored to your recovery needs and health goals
           </p>
         </header>
 
-        {/* Service Cards */}
-        <div className="space-y-12">
-          {servicesData.map((service, index) => (
-            <article 
-              key={index} 
-              className={`flex flex-col md:flex-row ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''} items-center`} 
-              aria-labelledby={`service-${index}-title`}
-            >
-              
-              {/* Image section */}
-              <div className="w-full md:w-1/2 mb-6 md:mb-0">
-                <img
-                  src={service.imageUrl}
-                  alt={`${service.title} - ${service.description}`}
-                  className="w-full h-[350px] object-cover rounded-lg shadow-md"
-                />
-              </div>
-              
-              {/* Text content */}
-              <div className="w-full md:w-1/2 md:px-8 flex flex-col space-y-4">
-                <h3 id={`service-${index}-title`} className="text-3xl font-bold text-gray-900">{service.title}</h3>
-                <p className="text-lg text-gray-700">{service.description}</p>
-                
-                {/* Sub-services if any */}
-                {service.subServices && (
-                  <ul className="list-disc list-inside space-y-1 text-gray-700">
-                    {service.subServices.map((subService, idx) => (
-                      <li key={idx} className="text-lg">{subService}</li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            </article>
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+  {servicesData.map((service, index) => (
+    <div 
+      key={index}
+      className={`relative group ${index === servicesData.length - 1 ? 'md:col-span-2' : ''}`}
+    >
+      {/* Image section - top half */}
+      <div className="w-full h-64 md:h-80 overflow-hidden rounded-t-xl shadow-lg">
+        <img
+          src={service.imageUrl}
+          alt={service.title}
+          className="w-full h-full object-cover transform group-hover:scale-105 transition duration-500"
+        />
+      </div>
+      
+      {/* Text content - bottom half */}
+      <div className={`relative ${service.color} p-8 rounded-b-xl shadow-lg -mt-4 z-10 ${index === servicesData.length - 1 ? 'max-w-3xl mx-auto' : ''}`}>
+        {/* Sticky note effect */}
+        <div className={`absolute -top-4 left-8 w-16 h-8 ${service.color} ${service.rotate} shadow-md`}></div>
+        <div className={`absolute -top-4 right-8 w-16 h-8 ${service.color} ${index % 2 === 0 ? 'rotate-2' : '-rotate-2'} shadow-md`}></div>
+        
+        <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">{service.title}</h3>
+        <p className="text-gray-700 text-lg leading-relaxed mb-6">{service.description}</p>
+        
+        <div className="absolute bottom-4 right-4">
+          <div className={`w-12 h-8 ${service.color} ${service.rotate} shadow-md`}></div>
         </div>
+      </div>
+    </div>
+  ))}
+</div>
       </div>
 
       {/* Contact Section */}
-      <CardSection
-        backgroundImage={abstract}
-        heading="Contact Us"
-        content="For inquiries or to schedule a ride, please contact us at (214)702-3232 or email us at dispatch@royalcaretrans.com. We look forward to serving you!"
-        buttonText="Schedule A Ride"
-        buttonLink="request-trip"
-      />
+      <div className="mt-24">
+        <CardSection
+          backgroundImage={abstract}
+          heading="Begin Your Healing Journey"
+          content="Contact us today to schedule an evaluation and discover how our specialized therapies can help you recover and thrive."
+          buttonText="Schedule Consultation"
+          buttonLink="contact-us"
+        />
+      </div>
     </section>
   );
 };
