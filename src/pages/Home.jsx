@@ -140,18 +140,7 @@ const Home = () => {
           </Link>
         </motion.div>
         
-        <motion.div variants={itemVariantsRight}>
-          <Link to="/request-trip">
-            <motion.button 
-              className="mt-4 sm:mt-0 sm:ml-2 w-48 bg-blue-600 text-white py-3 px-4 md:px-10 rounded-3xl hover:bg-blue-500 transition duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-600 focus-visible:ring-opacity-70"
-              variants={buttonVariants}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Book Your Trip
-            </motion.button>
-          </Link>
-        </motion.div>
+       
         
         <motion.div variants={itemVariantsRight}>
           <Link 
