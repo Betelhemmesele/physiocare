@@ -26,7 +26,7 @@ const ContactUsPage = () => {
     // Add CC email to form data
     const templateParams = {
       ...formData, // Includes name, email, message
-      cc_email: 'info@physiodevny.com' // Adding CC email here
+      cc_email: 'physiomedical2270@gmail.com' // Adding CC email here
     };
 
     // EmailJS integration
@@ -79,8 +79,8 @@ const ContactUsPage = () => {
   <h3 className="text-xl font-semibold text-gray-900 mb-2">📠 Fax</h3>
   <p className="text-lg text-gray-600 mb-4">(516) 379-7919</p>
 
-  <h3 className="text-xl font-semibold text-gray-900 mb-2">✉️ Email</h3>
-  <p className="text-lg text-gray-600 mb-4">info@physiodevny.com</p>
+  <h3 className="text-xl font-semibold text-gray-900 mb-2">✉️ Gmail</h3>
+  <p className="text-lg text-gray-600 mb-4">physiomedical2270@gmail.com</p>
 
   <h3 className="text-xl font-semibold text-gray-900 mb-2">🕒 Office Hours</h3>
   <p className="text-lg text-gray-600">

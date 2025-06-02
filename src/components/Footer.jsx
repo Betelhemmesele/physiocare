@@ -57,11 +57,19 @@ const Footer = () => {
             <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
             <ul className="space-y-3">
               <li><span className="font-semibold">Phone:</span> (516) 379-0000</li>
-              <li><span className="font-semibold">Email:</span> info@physiodevny.com</li>
+              <li><span className="font-semibold">Gmail:</span> physiomedical2270@gmail.com</li>
               <li><span className="font-semibold">Address:</span> 2270 Grand Ave, Baldwin, NY 11510</li>
             </ul>
           </div>
-  
+  {/* Call for Appointment */}
+<div className="mb-8 md:mb-0">
+  <h3 className="text-xl font-semibold mb-4">Call for Appointment</h3>
+  <p className="text-lg text-white">
+    Monday – Thursday: 10:00 AM – 7:00 PM<br />
+    Saturday: 10:00 AM – 3:00 PM
+  </p>
+</div>
+
           {/* Social Media Links */}
           <div>
             <h3 className="text-xl font-semibold mb-4">Follow Us</h3>

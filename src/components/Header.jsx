@@ -110,12 +110,12 @@ const Header = () => {
           <div className="flex items-center mx-auto">
           <Link to="/">
 
-            <img src={image} alt="Royal Care Logo" class="max-h-24 w-auto"  />
+            <img src={image} alt="Royal Care Logo" class="max-h-24 w-60"  />
             </Link>
           </div>
 
           {/* Call Icon (right side) */}
-          <a href="tel:+1214302-3232" className="text-blue-700 hover:text-orange-700 transition duration-300" aria-label="Follow us on Twitter">
+          <a href="tel:(516)379-0000" className="text-blue-700 hover:text-blue-500 transition duration-300" aria-label="Follow us on Twitter">
             <FaPhoneAlt className="w-6 h-6" />
           </a>
         </div>

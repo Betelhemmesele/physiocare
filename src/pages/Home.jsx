@@ -235,7 +235,7 @@ const Home = () => {
       {/* Pain Management */}
       <article className="service-card">
         <ServiceCard 
-          image="https://elitepainandspine.com/wp-content/uploads/2024/02/EPSI-Trigger-Point-Injections.png"
+          image="https://cdn.ketteringhealth.org/wp-content/uploads/2021/05/Pain-Management-iStock-1007757616.jpg.optimal.jpg?resize=292,292"
           title="Pain Management"
           description="Non-invasive therapies to manage chronic pain from arthritis, sciatica, migraines, and more — focusing on function and reducing medication use."
           link="/services"

@@ -101,7 +101,7 @@ const FaqSection = () => {
     <CardSection
     backgroundImage={abstract} // Background image for the section
     heading="Contact Us"
-    content="For inquiries or to schedule a ride, please contact us at (214)702-3232 or email us at dispatch@royalcaretrans.com. We look forward to serving you!"
+    content="For inquiries or to schedule a ride, please contact us at (516) 379-0000 or email us at info@physiodevny.com. We look forward to serving you!"
     buttonText="Contact Us"
     buttonLink="contact-us" // This will open the default mail client
   />
