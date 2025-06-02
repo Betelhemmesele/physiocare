@@ -1,6 +1,7 @@
 
 import React from 'react';
 import './ContactCard.css'
+import contact from '../assets/contact.webp';
 const CardSection = ({
   // backgroundImage,
   overlayColor = "bg-gray-900",
@@ -19,7 +20,7 @@ const CardSection = ({
           {/* Background image */}
           <div 
   className="background-image absolute inset-0 rounded-lg" 
-  style={{ '--background-image-url': `url('https://www.pixelstalk.net/wp-content/uploads/images8/Blue-Background-HD-Free-download.jpg')` }}
+  style={{ '--background-image-url': `url(${contact})` }}
 ></div>
 
           {/* Overlay for better text visibility */}

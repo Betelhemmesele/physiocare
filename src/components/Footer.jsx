@@ -1,6 +1,6 @@
 import { FaTwitter, FaInstagram, FaLinkedin ,FaFacebookF,FaEnvelope} from 'react-icons/fa';
 import { useEffect } from 'react';
-
+import sunride from '../assets/sunride.webp';
 const Footer = () => {
   // Load Facebook SDK
   useEffect(() => {
@@ -25,7 +25,9 @@ const Footer = () => {
   return (
     <footer
       className="text-white py-12 bg-cover bg-center"
-      style={{ backgroundImage: "url('https://www.sunline.org/sites/default/files/sunride-bluebg.jpg')" }}
+      style={{
+        backgroundImage: `url(${sunride})`, // ✅ Template literal with variable
+      }}
     >
       <div className="container mx-auto max-w-9xl px-4 md:px-1">
         <div className="flex flex-col md:flex-row justify-between md:space-x-2 lg:space-x-12">

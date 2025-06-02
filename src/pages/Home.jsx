@@ -17,6 +17,12 @@ import { Link } from 'react-router-dom';
 import ServiceCard from '../components/homeService';
 import './HomePage.css';
 import abstract from '../assets/abstract.webp';
+import PhysicalTherapy from '../assets/PhysicalTherapy.webp';
+import Worker from '../assets/Worker.webp';
+import PhysicalTherapy01 from '../assets/PhysicalTherapy01.webp';
+import Testimonial from '../assets/Testimonial.webp';
+import PainManagement from '../assets/PainManagement.webp';
+import Motorvehicleaccidentinjuries from '../assets/Motorvehicleaccidentinjuries.webp';
 // Animation variants
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -175,7 +181,7 @@ const Home = () => {
     {/* Image on one half */}
     <div className="w-full md:w-1/2 mb-8 md:mb-0">
       <img
-        src="https://hoganchiropractic.com/wp-content/uploads/2020/11/injured-patient-in-a-leg-brace-exercising-on-a-blu-AEF9RF8-scaled-e1604610327827.jpg.webp"
+        src={PhysicalTherapy}
         alt="Physical Therapy and Chiropractic Care"
         className="w-full h-auto rounded-full md:rounded-lg shadow-md"
       />
@@ -213,7 +219,7 @@ const Home = () => {
       {/* Worker’s Compensation Rehab */}
       <article className="service-card">
         <ServiceCard 
-           image="https://media.istockphoto.com/id/1132546141/photo/occupational-therapist-holding-leg-and-foot-of-patient.jpg?s=612x612&w=0&k=20&c=0pI7H-yuAjMp7B9_lYOu4uF4GsdTkuJEbYJVPcr6xRw="
+           image={Worker}
           title="Worker’s Compensation Rehab"
           description="Personalized therapy programs to help injured workers recover safely, return to work confidently, and navigate the workers’ comp process."
           link="/services"
@@ -224,7 +230,7 @@ const Home = () => {
       {/* Motor Vehicle Accident Recovery */}
       <article className="service-card">
         <ServiceCard 
-          image="https://coastalphysiotherapy.in/images/Motorvehicleaccidentinjuries.jpg"
+          image={Motorvehicleaccidentinjuries}
           title="Motor Vehicle Accident Recovery"
           description="Targeted treatments for whiplash, back pain, and joint trauma from car accidents. We assist with insurance documentation and care continuity."
           link="/services"
@@ -235,7 +241,7 @@ const Home = () => {
       {/* Pain Management */}
       <article className="service-card">
         <ServiceCard 
-          image="https://cdn.ketteringhealth.org/wp-content/uploads/2021/05/Pain-Management-iStock-1007757616.jpg.optimal.jpg?resize=292,292"
+          image={PainManagement}
           title="Pain Management"
           description="Non-invasive therapies to manage chronic pain from arthritis, sciatica, migraines, and more — focusing on function and reducing medication use."
           link="/services"
@@ -246,7 +252,7 @@ const Home = () => {
       {/* Physical Therapy */}
       <article className="service-card">
         <ServiceCard 
-          image="https://sa1s3optim.patientpop.com/assets/images/provider/photos/2779078.jpeg"
+          image={PhysicalTherapy01}
           title="Physical Therapy"
           description="Evidence-based rehab for orthopedic, neurological, and post-surgical conditions, restoring strength, balance, and flexibility."
           link="/services"
@@ -340,7 +346,7 @@ const Home = () => {
     <div className="flex flex-col lg:flex-row items-center">
     <div className="lg:w-1/2">
         <img 
-          src="https://t3.ftcdn.net/jpg/07/01/76/46/360_F_701764615_Vhtkv7zMzWkY52kdG9RxkDflnVeG8CR4.jpg" 
+          src={Testimonial} 
           alt="Testimonial" 
           className="w-full rounded-lg shadow-lg object-cover"
         />

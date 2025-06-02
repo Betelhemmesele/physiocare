@@ -1,20 +1,20 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import CardSection from '../components/Contactcard';
-
+import aboutus from '../assets/aboutus.webp';
 import abstract from '../assets/abstract.webp';
 import TeamCard from '../components/TeamCard'; // assume TeamCard is a reusable card component
-
+import doc1 from '../assets/doc1.webp';
+import doc2 from '../assets/doc2.webp';
+import doc3 from '../assets/doc3.webp';
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
 };
 
 const teamImages = [
-  'https://t4.ftcdn.net/jpg/10/51/54/65/360_F_1051546520_0oZZtT2sQkPHwQSLIV4N57ZoLZ5bziUk.jpg',
-  'https://t3.ftcdn.net/jpg/11/15/46/10/360_F_1115461028_03sd912AWhLb6RwuIuxQJ2tA8xRF13Jz.jpg',
-  'https://img.freepik.com/premium-photo/elderly-woman-docktor-checkup-discuss-symptoms_1215824-273.jpg'
-];
+  doc1,doc2,doc3
+]
 
 const AboutUs = () => {
   return (
@@ -28,7 +28,7 @@ const AboutUs = () => {
   variants={fadeInUp}
   className="relative w-full bg-cover bg-center rounded-xl text-white flex flex-col items-center pb-10 md:pb-0 min-h-[700px] md:min-h-[850px]"
   style={{
-    backgroundImage: `url("https://t3.ftcdn.net/jpg/08/78/37/14/360_F_878371475_wdGVuAwwG7pjOFmOURDaEB7Q2wXKB2IM.jpg")`,
+    backgroundImage: `url(${aboutus})`,
   }}
 >
   {/* About Us Content */}

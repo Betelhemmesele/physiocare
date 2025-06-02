@@ -1,40 +1,44 @@
 import React from 'react';
 import CardSection from '../components/Contactcard';
 import abstract from '../assets/abstract.webp';
-
+import chiropratic from '../assets/chiropratic.webp';
+import motoraccident from '../assets/motoraccident.webp';
+import painmgtt from '../assets/painmgtt.webp';
+import phytherapy from '../assets/phytherapy.webp';
+import workercompensation from '../assets/workercompensation.webp';
 const servicesData = [
   {
     title: "Worker's Compensation Rehab",
     description: "Personalized therapy programs to help injured workers recover safely, return to work confidently, and navigate the workers' comp process. We work closely with case managers, employers, and physicians.",
-    imageUrl: "https://media.istockphoto.com/id/1184631592/photo/male-patient-takes-first-steps-using-orthopedic-parallel-bars.jpg?s=612x612&w=0&k=20&c=mfSpYrxDdIB-_uxHFY9oOmI_nOpnpTdXkPFwzaJbPMU=",
+    imageUrl: workercompensation,
     color: "bg-blue-100",
     rotate: "-rotate-1"
   },
   {
     title: "Motor Vehicle Accident Recovery",
     description: "Targeted treatments for injuries like whiplash, back pain, neck strain, and joint trauma resulting from car accidents. We assist with insurance documentation and care continuity.",
-    imageUrl: "https://curezonephysiotherapy.com/wp-content/uploads/2023/11/WhatsApp-Image-2023-11-17-at-12.11.43-jpeg.webp",
+    imageUrl: motoraccident,
     color: "bg-blue-100",
     rotate: "rotate-1"
   },
   {
     title: "Pain Management",
     description: "Non-invasive therapies to reduce chronic pain symptoms caused by arthritis, disc issues, sciatica, migraines, or fibromyalgia — focusing on functional improvements and reduced reliance on medications.",
-    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcYj0EthGU7bqj7JVInd9AulxFDgzbgv0E1w&s",
+    imageUrl: painmgtt,
     color: "bg-blue-100",
     rotate: "-rotate-2"
   },
   {
     title: "Physical Therapy",
     description: "Evidence-based rehabilitation for orthopedic, neurological, and post-surgical conditions. We emphasize restoring strength, balance, and flexibility through guided movement and exercises.",
-    imageUrl: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    imageUrl: phytherapy,
     color: "bg-blue-100",
     rotate: "rotate-2"
   },
   {
     title: "Chiropractic Care",
     description: "Chiropractic adjustments, spinal manipulation, and soft tissue work to relieve pain, correct alignment, and support your nervous system. This complements physical therapy and promotes whole-body healing.",
-    imageUrl: "https://leeds-chiropractic.co.uk/wp-content/uploads/2024/07/cropped-shot-of-chiropractor-massaging-back-of-pat-2023-11-27-05-24-25-utc.webp",
+    imageUrl: chiropratic,
     color: "bg-blue-100",
     rotate: "-rotate-1"
   },
