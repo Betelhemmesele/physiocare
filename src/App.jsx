@@ -26,7 +26,7 @@ function App() {
           <Route path="/contact-us" element={< ContactUsPage />} />
           <Route path="/patient-info" element={<PatientInfo />} />
            <Route path="/faqs" element={< FaqSection />} />
-           <Route path="*" element={<NotFound />} /> {/* Catch-all route */}
+           <Route path="*" element={<NotFound />} />
 
         </Routes>
 

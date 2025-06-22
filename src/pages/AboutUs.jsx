@@ -1,12 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import CardSection from '../components/Contactcard';
-import aboutus from '../assets/aboutus.webp';
 import abstract from '../assets/abstract.webp';
 import TeamCard from '../components/TeamCard'; // assume TeamCard is a reusable card component
 import doc1 from '../assets/doc1.webp';
 import doc2 from '../assets/doc2.webp';
 import doc3 from '../assets/doc3.webp';
+import './AboutUs.css';
+
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
@@ -26,11 +27,9 @@ const AboutUs = () => {
   whileInView="visible"
   viewport={{ once: true }}
   variants={fadeInUp}
-  className="relative w-full bg-cover bg-center rounded-xl text-white flex flex-col items-center pb-10 md:pb-0 min-h-[700px] md:min-h-[850px]"
-  style={{
-    backgroundImage: `url(${aboutus})`,
-  }}
+  className="about-us-bg relative w-full rounded-xl text-white flex flex-col items-center pb-10 md:pb-0 min-h-[700px] md:min-h-[850px]"
 >
+
   {/* About Us Content */}
   <div className="bg-black bg-opacity-60 rounded-xl p-6 sm:p-8 md:p-10 max-w-4xl mx-4 mt-10 sm:mt-20">
     <h2 id="about-us-header" className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">

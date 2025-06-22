@@ -11,7 +11,7 @@ import {
   FaStar,
   FaEnvelope
 } from 'react-icons/fa';
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import CardSection from '../components/Contactcard';
 import { Link } from 'react-router-dom';
 import ServiceCard from '../components/homeService';
@@ -24,43 +24,43 @@ import Testimonial from '../assets/Testimonial.webp';
 import PainManagement from '../assets/PainManagement.webp';
 import Motorvehicleaccidentinjuries from '../assets/Motorvehicleaccidentinjuries.webp';
 // Animation variants
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2,
-      delayChildren: 0.5 // Delay after image appears
-    }
-  }
-};
+// const containerVariants = {
+//   hidden: { opacity: 0 },
+//   visible: {
+//     opacity: 1,
+//     transition: {
+//       staggerChildren: 0.2,
+//       delayChildren: 0.5 // Delay after image appears
+//     }
+//   }
+// };
 
-const itemVariantsLeft = {
-  hidden: { opacity: 0, x: -50 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: { duration: 0.6, ease: "easeOut" }
-  }
-};
+// const itemVariantsLeft = {
+//   hidden: { opacity: 0, x: -50 },
+//   visible: {
+//     opacity: 1,
+//     x: 0,
+//     transition: { duration: 0.6, ease: "easeOut" }
+//   }
+// };
 
-const itemVariantsRight = {
-  hidden: { opacity: 0, x: 50 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: { duration: 0.6, ease: "easeOut" }
-  }
-};
+// const itemVariantsRight = {
+//   hidden: { opacity: 0, x: 50 },
+//   visible: {
+//     opacity: 1,
+//     x: 0,
+//     transition: { duration: 0.6, ease: "easeOut" }
+//   }
+// };
 
-const buttonVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.5, ease: "easeOut" }
-  }
-};
+// const buttonVariants = {
+//   hidden: { opacity: 0, y: 20 },
+//   visible: {
+//     opacity: 1,
+//     y: 0,
+//     transition: { duration: 0.5, ease: "easeOut" }
+//   }
+// };
 
 const Home = () => {
   useEffect(() => {
@@ -95,79 +95,50 @@ const Home = () => {
   >
   <div className="absolute inset-0 bg-black bg-opacity-10 md:bg-opacity-10"></div>
 <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-8 w-full">
-  <div className="flex flex-col md:flex-row md:items-start">
-    {/* Left Section */}
-    <motion.div 
-      className="flex flex-col justify-center text-left text-white w-full md:w-1/2 space-y-4"
-      initial="hidden"
-      animate="visible"
-      variants={containerVariants}
-    >
-      {/* Heading */}
-      <motion.h1 
-        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight"
-        variants={itemVariantsLeft}
-      >
-        Welcome to PhysioDev NY – Your Path to Recovery Starts Here
-      </motion.h1>
+<div className="flex flex-col md:flex-row md:items-start">
+  {/* Left Section */}
+  <div className="flex flex-col justify-center text-left text-white w-full md:w-1/2 space-y-4">
+    {/* Heading */}
+    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+      Welcome to PhysioDev NY – Your Path to Recovery Starts Here
+    </h1>
+    
+    <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl">
+      Expert Physical Therapy and Chiropractic Care in Baldwin, NY
+    </h2>
+   
+    {/* Subheading */}
+    <ul className="text-base sm:text-lg md:text-xl lg:text-2xl list-disc pl-5">
+      <li>Personalized, evidence-based care</li>
+      <li>Specializing in auto injuries & work-related conditions</li>
+      <li>Convenient location in Baldwin, NY</li>
+    </ul>
+    
+    {/* Buttons */}
+    <div className="md:mt-4 flex flex-col sm:flex-row sm:justify-start">
+      <div>
+        <Link to="/contact-us">
+          <button className="w-48 bg-blue-600 text-white py-3 px-4 md:px-10 rounded-3xl hover:bg-blue-500 transition duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-600 focus-visible:ring-opacity-70">
+            Contact Us
+          </button>
+        </Link>
+      </div>
       
-      <motion.h2 
-        className="text-base sm:text-lg md:text-xl lg:text-2xl"
-        variants={itemVariantsLeft}
-      >
-        Expert Physical Therapy and Chiropractic Care in Baldwin, NY
-      </motion.h2>
-     
-      {/* Subheading */}
-      <motion.ul 
-        className="text-base sm:text-lg md:text-xl lg:text-2xl list-disc pl-5"
-        variants={itemVariantsLeft}
-      >
-        <motion.li variants={itemVariantsLeft}>Personalized, evidence-based care</motion.li>
-        <motion.li variants={itemVariantsLeft}>Specializing in auto injuries & work-related conditions</motion.li>
-        <motion.li variants={itemVariantsLeft}>Convenient location in Baldwin, NY</motion.li>
-      </motion.ul>
-      
-      {/* Buttons - coming from right */}
-      <motion.div 
-        className="md:mt-4 flex flex-col sm:flex-row sm:justify-start"
-        variants={containerVariants}
-      >
-        <motion.div variants={itemVariantsRight}>
-          <Link to="/contact-us">
-            <motion.button 
-              className="w-48 bg-blue-600 text-white py-3 px-4 md:px-10 rounded-3xl hover:bg-blue-500 transition duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-600 focus-visible:ring-opacity-70"
-              variants={buttonVariants}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Contact Us
-            </motion.button>
-          </Link>
-        </motion.div>
-        
-       
-        
-        <motion.div variants={itemVariantsRight}>
-          <Link 
-            to="https://accounts.zoho.com/signin?servicename=VirtualOffice&signupurl=https://www.zoho.com/mail/zohomail-pricing.html&serviceurl=https://mail.zoho.com"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <motion.button 
-              className="mt-4 sm:mt-0 sm:ml-2 w-48 bg-blue-600 text-white py-3 px-4 md:px-10 rounded-3xl hover:bg-blue-500 transition duration-200 flex items-center justify-center focus-visible:ring-2 focus-visible:ring-orange-600 focus-visible:ring-opacity-70 gap-2"
-              variants={buttonVariants}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <span>Zoho Mail</span>
-              <FaEnvelope className="text-white text-lg sm:text-xl md:text-2xl lg:text-2xl" />
-            </motion.button>
-          </Link>
-        </motion.div>
-      </motion.div>
-    </motion.div>
+      <div>
+        <Link 
+          to="https://accounts.zoho.com/signin?servicename=VirtualOffice&signupurl=https://www.zoho.com/mail/zohomail-pricing.html&serviceurl=https://mail.zoho.com"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <button className="mt-4 sm:mt-0 sm:ml-2 w-48 bg-blue-600 text-white py-3 px-4 md:px-10 rounded-3xl hover:bg-blue-500 transition duration-200 flex items-center justify-center focus-visible:ring-2 focus-visible:ring-orange-600 focus-visible:ring-opacity-70 gap-2">
+            <span>Zoho Mail</span>
+            <FaEnvelope className="text-white text-lg sm:text-xl md:text-2xl lg:text-2xl" />
+          </button>
+        </Link>
+      </div>
+    </div>
   </div>
+</div>
 </div>
 </div>
 

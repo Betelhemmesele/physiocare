@@ -18,10 +18,11 @@ const CardSection = ({
       <div className="container mx-auto max-w-6xl px-4 md:px-2">
         <div className="relative">
           {/* Background image */}
-          <div 
-  className="background-image absolute inset-0 rounded-lg" 
-  style={{ '--background-image-url': `url(${contact})` }}
-></div>
+          <div
+  className={`background-image absolute inset-0 rounded-lg`}
+  data-image={contact}
+/>
+
 
           {/* Overlay for better text visibility */}
           <div className={`absolute inset-0 ${overlayColor} ${overlayOpacity} rounded-lg`}></div>

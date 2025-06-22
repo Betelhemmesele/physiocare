@@ -16,7 +16,7 @@ const Header = () => {
       <div className="container mx-auto my-0 px-4 md:px-2 lg:px-8 flex items-center justify-between">
       <div className="items-center hidden md:flex">
   <Link to="/">
-    <img src={image} alt="Royal Care Logo" class="h-24 w-auto"  />
+    <img src={image} alt="Royal Care Logo" className="h-24 w-auto"  />
   </Link>
 </div>
 
