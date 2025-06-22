@@ -23,44 +23,6 @@ import PhysicalTherapy01 from '../assets/PhysicalTherapy01.webp';
 import Testimonial from '../assets/Testimonial.webp';
 import PainManagement from '../assets/PainManagement.webp';
 import Motorvehicleaccidentinjuries from '../assets/Motorvehicleaccidentinjuries.webp';
-// Animation variants
-// const containerVariants = {
-//   hidden: { opacity: 0 },
-//   visible: {
-//     opacity: 1,
-//     transition: {
-//       staggerChildren: 0.2,
-//       delayChildren: 0.5 // Delay after image appears
-//     }
-//   }
-// };
-
-// const itemVariantsLeft = {
-//   hidden: { opacity: 0, x: -50 },
-//   visible: {
-//     opacity: 1,
-//     x: 0,
-//     transition: { duration: 0.6, ease: "easeOut" }
-//   }
-// };
-
-// const itemVariantsRight = {
-//   hidden: { opacity: 0, x: 50 },
-//   visible: {
-//     opacity: 1,
-//     x: 0,
-//     transition: { duration: 0.6, ease: "easeOut" }
-//   }
-// };
-
-// const buttonVariants = {
-//   hidden: { opacity: 0, y: 20 },
-//   visible: {
-//     opacity: 1,
-//     y: 0,
-//     transition: { duration: 0.5, ease: "easeOut" }
-//   }
-// };
 
 const Home = () => {
   useEffect(() => {
