@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
 import CardSection from '../components/Contactcard';
-import abstract from '../assets/abstract.webp';
+
 const FaqItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -99,7 +99,6 @@ const FaqSection = () => {
       
     </div>
     <CardSection
-    backgroundImage={abstract} // Background image for the section
     heading="Contact Us"
     content="For inquiries or to schedule a ride, please contact us at (516) 379-0000 or email us at info@physiodevny.com. We look forward to serving you!"
     buttonText="Contact Us"
