@@ -104,16 +104,20 @@ const Header = () => {
                 </svg>
               </button>
 
-              {['Home', 'Services', 'Patient Info', 'Contact Us', 'About Us', 'Testimonials', 'FAQs'].map((item) => (
-                <Link
-                  key={item}
-                  to={`/${item.toLowerCase().replace(' ', '-')}`}
-                  className="block text-gray-700 hover:bg-blue-500 hover:text-white px-4 py-2 rounded-sm transition duration-300 w-full"
-                  onClick={toggleMenu}
-                >
-                  {item}
-                </Link>
-              ))}
+              {['Home', 'Services', 'Patient Info', 'Contact Us', 'About Us', 'Testimonials', 'FAQs'].map((item) => {
+  const path = item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`;
+  return (
+    <Link
+      key={item}
+      to={path}
+      className="block text-gray-700 hover:bg-blue-500 hover:text-white px-4 py-2 rounded-sm transition duration-300 w-full"
+      onClick={toggleMenu}
+    >
+      {item}
+    </Link>
+  );
+})}
+
             </div>
           </div>
         </>

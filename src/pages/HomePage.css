@@ -1,24 +1,26 @@
-/* Replace your current hero-section with this optimized version */
+/* ./HomePage.css */
+
+/*
+  Add this block to your CSS file.
+  It uses responsive background images to load the right size for the right screen,
+  saving bandwidth on mobile devices.
+*/
 .hero-section {
-  background-image: url('https://res.cloudinary.com/.../c_scale,w_480,q_60/phsiohome_veoatl.webp');
+  background-image: url('https://res.cloudinary.com/dte18rjfm/image/upload/f_auto,q_60,w_480/phsiohome_veoatl.webp');
   background-size: cover;
   background-position: center;
   position: relative;
   width: 100%;
-  height: 50vh; /* Reduced from 100vh for mobile */
-  min-height: 400px; /* Reduced from 600px */
+  /* Use a fixed min-height and a responsive height for different viewports */
+  height: 60vh; /* A bit taller for a better mobile feel */
+  min-height: 450px;
 }
 
+/* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .hero-section {
     height: 100vh;
     min-height: 600px;
-    background-image: url('https://res.cloudinary.com/.../c_scale,w_1200,q_80/phsiohome_veoatl.webp');
-  }
-}
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-  .hero-section {
     background-image: url('https://res.cloudinary.com/dte18rjfm/image/upload/f_auto,q_80,w_1200/phsiohome_veoatl.webp');
   }
 }
@@ -28,4 +30,49 @@
   .hero-section {
     background-image: url('https://res.cloudinary.com/dte18rjfm/image/upload/f_auto,q_90,w_1920/phsiohome_veoatl.webp');
   }
+}
+
+/* Ensure other styles from your original file are kept */
+.section {
+  opacity: 0;
+  transform: translateY(2.5rem); /* 40px */
+  transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.background-image-section {
+  position: relative;
+  background-image: url('https://res.cloudinary.com/dte18rjfm/image/upload/f_auto,q_auto,w_1200/v1750768725/whychooseus_i5fd8r.webp');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Parallax effect */
+}
+
+/* Add a pseudo-element for the dark overlay */
+.background-image-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(16, 24, 40, 0.6); /* Dark overlay */
+  z-index: 1;
+}
+
+/* Ensure content is above the overlay */
+.background-image-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+
+.icon {
+  font-size: 3rem; /* 48px */
+  margin-bottom: 1rem; /* 16px */
+  color: #ffffff;
 }
