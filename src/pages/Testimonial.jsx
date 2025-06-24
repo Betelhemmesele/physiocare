@@ -5,7 +5,7 @@ import Slider from "react-slick";
 import { FaQuoteLeft } from 'react-icons/fa';
 import './TestimonialPage.css'; 
 import CardSection from "../components/Contactcard";
-import abstract from '../assets/abstract.webp';
+
 const testimonials = [
   {
     text: "After my car accident, I could barely move my neck. The team at PhysioDev not only helped me recover but also explained every step of the treatment. I’m pain-free and finally sleeping well again!",
@@ -52,8 +52,7 @@ const TestimonialPage = () => {
         ))}
       </Slider>
       <CardSection
-  backgroundImage={abstract} // Background image for the section
-  heading="Send Us Review"
+   heading="Send Us Review"
   content="If you have anything to tell the world about us , please click below."
   buttonText="click Here"
   buttonLink="/contact-us" // This will open the default mail client
