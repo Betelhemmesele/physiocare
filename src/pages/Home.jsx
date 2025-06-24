@@ -16,13 +16,6 @@ import CardSection from '../components/Contactcard';
 import { Link } from 'react-router-dom';
 import ServiceCard from '../components/homeService';
 import './HomePage.css';
-import abstract from '../assets/abstract.webp';
-import PhysicalTherapy from '../assets/PhysicalTherapy.webp';
-import Worker from '../assets/Worker.webp';
-import PhysicalTherapy01 from '../assets/PhysicalTherapy01.webp';
-import Testimonial from '../assets/Testimonial.webp';
-import PainManagement from '../assets/PainManagement.webp';
-import Motorvehicleaccidentinjuries from '../assets/Motorvehicleaccidentinjuries.webp';
 
 const Home = () => {
   useEffect(() => {
@@ -113,12 +106,20 @@ const Home = () => {
     
     {/* Image on one half */}
     <div className="w-full md:w-1/2 mb-8 md:mb-0">
-      <img
-        src={PhysicalTherapy}
-        alt="Physical Therapy and Chiropractic Care"
-        className="w-full h-auto rounded-full md:rounded-lg shadow-md"
-      />
-    </div>
+  <img
+    src="https://res.cloudinary.com/dte18rjfm/image/upload/w_auto,q_auto,f_auto/PhysicalTherapy_ykohgn.webp"
+    srcSet="
+      https://res.cloudinary.com/dte18rjfm/image/upload/w_400,q_auto,f_auto/PhysicalTherapy_ykohgn.webp 400w,
+      https://res.cloudinary.com/dte18rjfm/image/upload/w_800,q_auto,f_auto/PhysicalTherapy_ykohgn.webp 800w,
+      https://res.cloudinary.com/dte18rjfm/image/upload/w_1200,q_auto,f_auto/PhysicalTherapy_ykohgn.webp 1200w
+    "
+    sizes="(max-width: 768px) 100vw, 50vw"
+    alt="Physical Therapy and Chiropractic Care"
+    className="w-full h-auto rounded-full md:rounded-lg shadow-md"
+    loading="lazy"
+  />
+</div>
+
     
     {/* Text content on the other half */}
     <div className="w-full md:w-1/2 flex flex-col justify-center space-y-4 px-4 md:px-8">
@@ -152,7 +153,7 @@ const Home = () => {
       {/* Worker’s Compensation Rehab */}
       <article className="service-card">
         <ServiceCard 
-           image={Worker}
+           image="https://res.cloudinary.com/dte18rjfm/image/upload/v1750768725/Worker_qbcbxa.webp"
           title="Worker’s Compensation Rehab"
           description="Personalized therapy programs to help injured workers recover safely, return to work confidently, and navigate the workers’ comp process."
           link="/services"
@@ -163,7 +164,7 @@ const Home = () => {
       {/* Motor Vehicle Accident Recovery */}
       <article className="service-card">
         <ServiceCard 
-          image={Motorvehicleaccidentinjuries}
+          image="https://res.cloudinary.com/dte18rjfm/image/upload/v1750768725/Motorvehicleaccidentinjuries_ftozp6.webp"
           title="Motor Vehicle Accident Recovery"
           description="Targeted treatments for whiplash, back pain, and joint trauma from car accidents. We assist with insurance documentation and care continuity."
           link="/services"
@@ -174,7 +175,7 @@ const Home = () => {
       {/* Pain Management */}
       <article className="service-card">
         <ServiceCard 
-          image={PainManagement}
+          image="https://res.cloudinary.com/dte18rjfm/image/upload/v1750768725/PainManagement_ujs8jl.webp"
           title="Pain Management"
           description="Non-invasive therapies to manage chronic pain from arthritis, sciatica, migraines, and more — focusing on function and reducing medication use."
           link="/services"
@@ -185,7 +186,7 @@ const Home = () => {
       {/* Physical Therapy */}
       <article className="service-card">
         <ServiceCard 
-          image={PhysicalTherapy01}
+          image="https://res.cloudinary.com/dte18rjfm/image/upload/v1750768723/PhysicalTherapy01_ots3er.webp"
           title="Physical Therapy"
           description="Evidence-based rehab for orthopedic, neurological, and post-surgical conditions, restoring strength, balance, and flexibility."
           link="/services"
@@ -274,41 +275,49 @@ const Home = () => {
   </div>
 </section>
 
-    <section className="section opacity-0 transform translate-y-10 transition-all duration-700 ease-in-out py-20 bg-gray-100">
+<section className="section opacity-0 transform translate-y-10 transition-all duration-700 ease-in-out py-20 bg-gray-100">
   <div className="container mx-auto max-w-6xl px-4 md:px-8">
-    <div className="flex flex-col lg:flex-row items-center">
-    <div className="lg:w-1/2">
-        <img 
-          src={Testimonial} 
-          alt="Testimonial" 
+    <div className="flex flex-col lg:flex-row items-center gap-12">
+      
+      {/* Image Side */}
+      <div className="lg:w-1/2 w-full">
+        <img
+          src="https://res.cloudinary.com/dte18rjfm/image/upload/f_auto,q_auto,w_800/Testimonial_bntlrp.webp"
+          srcSet="
+            https://res.cloudinary.com/dte18rjfm/image/upload/f_auto,q_auto,w_400/Testimonial_bntlrp.webp 400w,
+            https://res.cloudinary.com/dte18rjfm/image/upload/f_auto,q_auto,w_600/Testimonial_bntlrp.webp 600w,
+            https://res.cloudinary.com/dte18rjfm/image/upload/f_auto,q_auto,w_800/Testimonial_bntlrp.webp 800w
+          "
+          sizes="(max-width: 768px) 100vw, 50vw"
+          alt="Testimonial from client"
           className="w-full rounded-lg shadow-lg object-cover"
+          loading="lazy"
         />
       </div>
-     
-      <div className="lg:w-1/2 mb-8 lg:mb-0">
+
+      {/* Text Side */}
+      <div className="lg:w-1/2 w-full">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
         <p className="text-gray-700 mb-6 ml-2">
           "After my car accident, I could barely move my neck. The team at PhysioDev not only helped me recover but also explained every step of the treatment. I’m pain-free and finally sleeping well again!"
         </p>
         <p className="text-gray-700 mb-8 italic">- Danielle S., Freeport, NY</p>
-        
-        <a 
-          href="/testimonials" // Link to the testimonial page
+        <a
+          href="/testimonials"
           className="bg-blue-700 text-white py-3 px-6 rounded-lg mt-10 hover:bg-blue-600 transition duration-200"
         >
           See Reviews
         </a>
       </div>
-      
- 
-     
+
     </div>
   </div>
 </section>
 
 
+
 <CardSection
-  backgroundImage={abstract}
+  
   heading="Ready to Begin Your Healing Journey?"
   content="Scheduling your session with PhysioDev NY is simple and stress-free. Whether you need a one-time consultation or ongoing treatment, our team is here to support your recovery every step of the way."
   buttonText="Book an Appointment"
