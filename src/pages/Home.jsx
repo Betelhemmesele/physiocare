@@ -49,10 +49,11 @@ const Home = () => {
     className="hero-section relative flex items-center justify-center min-h-screen bg-cover bg-center"
   >
   <div className="absolute inset-0 bg-black bg-opacity-10 md:bg-opacity-10"></div>
-<div className="relative z-10 max-w-6xl mx-auto px-4 md:px-8 w-full">
+<div className="relative z-10 max-w-6xl  mx-auto px-4 md:px-8 w-full">
 <div className="flex flex-col md:flex-row md:items-start">
   {/* Left Section */}
-  <div className="flex flex-col justify-center text-left text-white w-full md:w-1/2 space-y-4">
+  <div className="flex flex-col justify-center text-left pt-20 sm:pt-6 md:pt-0 text-white w-full md:w-1/2 space-y-4">
+
     {/* Heading */}
     <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
       Welcome to PhysioDev NY – Your Path to Recovery Starts Here
