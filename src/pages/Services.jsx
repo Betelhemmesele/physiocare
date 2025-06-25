@@ -1,6 +1,5 @@
 import React from 'react';
 import CardSection from '../components/Contactcard';
-
 const servicesData = [
   {
     title: "Worker's Compensation Rehab",
@@ -101,9 +100,9 @@ const ServicesPage = () => {
         </div>
       </div>
 
-      {/* Contact CTA */}
       <div className="mt-24">
         <CardSection
+        backgroundImage = "https://res.cloudinary.com/dte18rjfm/image/upload/f_auto,q_auto,w_1600/contact_y2wjsr.webp"
           heading="Begin Your Healing Journey"
           content="Contact us today to schedule an evaluation and discover how our specialized therapies can help you recover and thrive."
           buttonText="Schedule Consultation"
